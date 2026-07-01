@@ -1,0 +1,107 @@
+@import "tailwindcss";
+
+:root {
+  --background: #080707;
+  --foreground: #F5F2EB;
+}
+
+@theme {
+  --font-sans: var(--font-montserrat), Arial, Helvetica, sans-serif;
+  --font-serif: var(--font-cormorant), Georgia, serif;
+
+  /* Custom Luxury Color Palette */
+  --color-brand-blush: #F4B5C1;
+  --color-brand-blush-light: #FCEEF1;
+  --color-brand-blush-dark: #D48C97;
+  --color-brand-gold: #DFBA73;
+  --color-brand-gold-dark: #C5A059;
+  --color-brand-charcoal: #121010;
+  --color-brand-charcoal-light: #1E1B1B;
+  --color-brand-cream: #F5F2EB;
+  
+  /* Animations */
+  --animate-float: float 6s ease-in-out infinite;
+  --animate-float-reverse: float-reverse 7s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 8s ease-in-out infinite;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px) rotate(0.5deg);
+  }
+  50% {
+    transform: translateY(-12px) rotate(-0.5deg);
+  }
+}
+
+@keyframes float-reverse {
+  0%, 100% {
+    transform: translateY(0px) rotate(-0.5deg);
+  }
+  50% {
+    transform: translateY(12px) rotate(0.5deg);
+  }
+}
+
+@keyframes pulse-slow {
+  0%, 100% {
+    opacity: 0.15;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.35;
+    transform: scale(1.05);
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-sans);
+  overflow-x: hidden;
+}
+
+/* Custom Scrollbar for Luxury Aesthetic */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #080707;
+}
+::-webkit-scrollbar-thumb {
+  background: #1E1B1B;
+  border-radius: 4px;
+  border: 2px solid #080707;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #F4B5C1;
+}
+
+/* Glassmorphism Utilities */
+.glass-panel {
+  background: rgba(18, 16, 16, 0.6);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(244, 181, 193, 0.15);
+}
+
+.glass-panel-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(18, 16, 16, 0.75);
+  border-color: rgba(244, 181, 193, 0.3);
+  box-shadow: 0 12px 40px -12px rgba(244, 181, 193, 0.15);
+  transform: translateY(-4px);
+}
+
+.glass-card-blush {
+  background: linear-gradient(135deg, rgba(244, 181, 193, 0.08), rgba(20, 15, 15, 0.7));
+  border: 1px solid rgba(244, 181, 193, 0.15);
+}
+
+.glass-card-gold {
+  background: linear-gradient(135deg, rgba(223, 186, 115, 0.08), rgba(20, 15, 15, 0.7));
+  border: 1px solid rgba(223, 186, 115, 0.15);
+}
