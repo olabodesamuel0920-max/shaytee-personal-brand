@@ -55,13 +55,6 @@ export default function Navbar() {
                 {link.name}
               </Link>
             ))}
-            <Link
-              href="/owner-review"
-              className="group flex items-center gap-1.5 rounded-full border border-brand-gold/30 bg-brand-gold/5 px-4 py-2 text-xs tracking-widest uppercase text-brand-gold transition-all duration-300 hover:border-brand-gold hover:bg-brand-gold/15"
-            >
-              Owner Review
-              <ArrowUpRight className="h-3 w-3 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" />
-            </Link>
           </nav>
 
           {/* Mobile menu button */}
@@ -106,16 +99,6 @@ export default function Navbar() {
               {link.name}
             </Link>
           ))}
-          <div className="pt-4 border-t border-brand-blush/10 px-3">
-            <Link
-              href="/owner-review"
-              onClick={() => setIsOpen(false)}
-              className="flex w-full items-center justify-between rounded-full border border-brand-gold/30 bg-brand-gold/5 px-5 py-3 text-sm tracking-widest uppercase text-brand-gold transition-all duration-300 hover:bg-brand-gold/10"
-            >
-              <span>Owner Review Portal</span>
-              <ArrowUpRight className="h-4 w-4" />
-            </Link>
-          </div>
         </div>
       </div>
     </header>

@@ -127,13 +127,6 @@ export default function Footer() {
             &copy; {currentYear} Shaytee Experience. All rights reserved. Designed for presentation purposes.
           </p>
           <div className="flex items-center gap-6">
-            <Link
-              href="/owner-review"
-              className="text-xs tracking-wider uppercase text-brand-gold hover:text-brand-blush transition-colors"
-            >
-              Owner Review Checklist
-            </Link>
-            <span className="text-brand-cream/30 text-xs">|</span>
             <span className="text-xs text-brand-cream/40">Akure, Nigeria</span>
           </div>
         </div>
